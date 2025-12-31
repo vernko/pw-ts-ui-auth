@@ -15,15 +15,11 @@ test('homepage H1 heading contains correct content', async ({ page }) => {
 })
 
 test('homepage feature section matches visual snapshot', async ({ page }) => {
-    const footer = page.locator('.features_keug')
-
-    await expect(footer).toHaveScreenshot('features.png')
+    await expect(homePage.featuresSection).toHaveScreenshot('features.png')
 })
 
 test('homepage footer matches visual snapshot', async ({ page }) => {
-    const footer = page.locator('footer')
-
-    await expect(footer).toHaveScreenshot('footer.png')
+    await expect(homePage.footerSection).toHaveScreenshot('footer.png')
 })
 
 test('homepage footer contains Microsoft copyright with current year', async ({ page }) => {

@@ -1,6 +1,7 @@
 import { expect, Locator, Page } from "@playwright/test"
 
 export class HomePage {
+    get heroHeader() { return this.page.locator('.hero') }
     get mainHomeHeading() { return this.page.locator('.hero__title') }
     get footerCopyright() { return this.page.locator('.footer__copyright') }
     get searchBar() { return this.page.locator('.DocSearch-Button-Container') }

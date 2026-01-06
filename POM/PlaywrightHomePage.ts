@@ -1,4 +1,4 @@
-import { expect, Locator, Page } from "@playwright/test"
+import { Locator, Page } from "@playwright/test"
 
 export class HomePage {
     get heroHeader() { return this.page.locator('.hero') }
@@ -11,16 +11,4 @@ export class HomePage {
     get searchItem() { return this.page.getByRole('link', { name: 'Locators', exact: true }) }
 
     constructor (readonly page: Page) {}
-    
-    async click(locator: Locator) {
-        await locator.click()
-    }
-
-    async fillField(locator: Locator, text: string) {
-        await locator.fill(text)
-    }
-
-    async getTextContent(locator: Locator) {
-        return await locator.textContent()
-    }
 }

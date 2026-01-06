@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../POM/HomePage';
+import { HomePage } from '../POM/PlaywrightHomePage';
+import { click, fillField, getTextContent } from './helpers/utils'
 
 let homePage: HomePage;
 
@@ -31,9 +32,9 @@ test('homepage footer contains Microsoft copyright with current year', async ({ 
 test('search navigates to locators documentation page', async ({ page }) => {
     const searchText = 'Locators'
 
-    homePage.click(homePage.searchBar)
-    homePage.fillField(homePage.SearchField, searchText)
-    homePage.click(homePage.searchItem)
+    click(homePage.searchBar)
+    fillField(homePage.SearchField, searchText)
+    click(homePage.searchItem)
     await expect(page).toHaveURL(/\/docs\/locators/)
 })
 

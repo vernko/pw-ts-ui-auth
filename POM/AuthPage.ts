@@ -7,6 +7,7 @@ export class AuthPage {
     get loginButton() { return this.page.getByRole('button', { name: 'Login' }) }
     get welcomeHeading() { return this.page.getByRole('heading', { name: 'Welcome, testuser!' }) }
     get invalidLoginHeading() { return this.page.getByRole('heading', { name: 'Invalid credentials.' }) }
+    get protectedHeading() { return this.page.getByRole('heading', { name: 'Protected Route' }) }
 
     constructor (readonly page: Page) {}
 }

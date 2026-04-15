@@ -1,4 +1,4 @@
-# # Playwright TypeScript - UI & Authentication Testing
+# Playwright TypeScript - UI & Authentication Testing
 
 ## Purpose
 
